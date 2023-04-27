@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    width: 580px;
+    aspect-ratio: 2 / 3;
+    border: 0.25rem solid rgb(255 255 255 / 15%);
+    overflow: hidden;
+}
+
+#card > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: url(#noise);
+}
+
+@keyframes pulse {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.2;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+#card:hover > img {
+    animation: pulse 800ms ease-out;
+}
